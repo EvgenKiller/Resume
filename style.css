@@ -1,0 +1,270 @@
+/* Базові стилі */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5;
+}
+
+/* Основний контейнер резюме */
+.resume-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 20px auto;
+    background: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Ліва колонка - Особиста інформація */
+.personal-sidebar {
+    width: 35%;
+    background: #1e293b;
+    color: white;
+    padding: 30px;
+}
+
+/* Секція з фото */
+.photo-section {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.photo-placeholder {
+    width: 150px;
+    height: 150px;
+    background: #374151;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    border: 3px solid #4b5563;
+}
+
+.photo-section h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #f8fafc;
+}
+
+/* Контактна інформація */
+.contact-info {
+    margin-bottom: 30px;
+}
+
+    .contact-info h2 {
+        font-size: 18px;
+        margin-bottom: 15px;
+        color: #f8fafc;
+        border-bottom: 2px solid #6366f1;
+        padding-bottom: 5px;
+    }
+
+.info-item {
+    margin-bottom: 12px;
+    display: flex;
+    flex-direction: column;
+}
+
+    .info-item strong {
+        font-size: 14px;
+        color: #cbd5e1;
+        margin-bottom: 3px;
+    }
+
+    .info-item span {
+        font-size: 14px;
+        color: #e2e8f0;
+    }
+
+/* Секція мов */
+.languages h2 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #f8fafc;
+    border-bottom: 2px solid #6366f1;
+    padding-bottom: 5px;
+}
+
+.languages ul {
+    list-style: none;
+}
+
+.languages li {
+    padding: 8px 0;
+    font-size: 14px;
+    color: #e2e8f0;
+    border-bottom: 1px solid #374151;
+}
+
+    .languages li:last-child {
+        border-bottom: none;
+    }
+
+/* Права колонка - Основна інформація */
+.main-content {
+    width: 65%;
+    padding: 40px;
+    background: #ffffff;
+}
+
+/* Секція "Про себе" */
+.about-section {
+    margin-bottom: 20px;
+}
+
+    .about-section p {
+        font-size: 14px;
+        text-align: justify;
+        line-height: 1.8;
+        color: #374151;
+    }
+
+/* Роздільна лінія */
+.divider {
+    border: none;
+    border-top: 2px solid #e5e7eb;
+    margin: 25px 0;
+}
+
+/* Секція досвіду роботи */
+.experience-section h2 {
+    font-size: 22px;
+    color: #1f2937;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #6366f1;
+    padding-bottom: 5px;
+}
+
+.job-item {
+    margin-bottom: 25px;
+    background: #f8fafc;
+    padding: 15px;
+    border-radius: 5px;
+    border-left: 4px solid #6366f1;
+}
+
+.job-header {
+    margin-bottom: 10px;
+}
+
+.job-type {
+    font-style: italic;
+    color: #6b7280;
+    font-size: 14px;
+}
+
+.job-details div {
+    margin-bottom: 8px;
+    display: flex;
+}
+
+.job-details strong {
+    min-width: 120px;
+    font-size: 14px;
+    color: #374151;
+}
+
+.job-details span {
+    font-size: 14px;
+    color: #4b5563;
+}
+
+/* Секція освіти */
+.education-section h2 {
+    font-size: 22px;
+    color: #1f2937;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #6366f1;
+    padding-bottom: 5px;
+}
+
+.education-item {
+    margin-bottom: 25px;
+    background: #f8fafc;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+    .education-item h3 {
+        font-size: 16px;
+        color: #1f2937;
+        margin-bottom: 5px;
+    }
+
+    .education-item h4 {
+        font-size: 15px;
+        color: #6366f1;
+        margin-bottom: 8px;
+        font-weight: bold;
+    }
+
+    .education-item p {
+        font-size: 14px;
+        color: #6b7280;
+    }
+
+/* Секція навичок */
+.skills-section h2 {
+    font-size: 22px;
+    color: #1f2937;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #6366f1;
+    padding-bottom: 5px;
+}
+
+.skills-list h3 {
+    font-size: 16px;
+    color: #1f2937;
+    margin-bottom: 10px;
+    padding: 8px 0;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+    .skills-list h3:last-child {
+        border-bottom: none;
+    }
+
+/* Адаптивність для мобільних пристроїв */
+@media (max-width: 768px) {
+    .resume-container {
+        flex-direction: column;
+        margin: 10px;
+    }
+
+    .personal-sidebar,
+    .main-content {
+        width: 100%;
+    }
+
+    .personal-sidebar {
+        padding: 20px;
+    }
+
+    .main-content {
+        padding: 20px;
+    }
+
+    .job-details div {
+        flex-direction: column;
+    }
+
+    .job-details strong {
+        min-width: auto;
+        margin-bottom: 3px;
+    }
+}
+
+/* Стилі для реального фото */
+.photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #4b5563;
+    margin: 0 auto 20px;
+    display: block;
+}
